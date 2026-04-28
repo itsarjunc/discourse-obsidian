@@ -1,0 +1,180 @@
+// ============================================================================
+// Discourse Obsidian — Forms & Inputs
+// ============================================================================
+
+// ── Text inputs ────────────────────────────────────────────────────────────
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-input);
+  border-radius: var(--obsidian-radius-md);
+  color: var(--obsidian-foreground);
+  padding: 0.5em 0.75em;
+  transition: border-color var(--obsidian-transition-fast),
+    box-shadow var(--obsidian-transition-fast);
+
+  &::placeholder {
+    color: var(--obsidian-muted-foreground);
+  }
+
+  &:focus {
+    border-color: var(--obsidian-ring);
+    box-shadow: 0 0 0 3px rgba(0, 120, 242, 0.1);
+    outline: none;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// ── Textarea ──────────────────────────────────────────────────────────────
+textarea {
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-input);
+  border-radius: var(--obsidian-radius-md);
+  color: var(--obsidian-foreground);
+  transition: border-color var(--obsidian-transition-fast),
+    box-shadow var(--obsidian-transition-fast);
+
+  &::placeholder {
+    color: var(--obsidian-muted-foreground);
+  }
+
+  &:focus {
+    border-color: var(--obsidian-ring);
+    box-shadow: 0 0 0 3px rgba(0, 120, 242, 0.1);
+    outline: none;
+  }
+}
+
+// ── Select ────────────────────────────────────────────────────────────────
+select {
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-input);
+  border-radius: var(--obsidian-radius-md);
+  color: var(--obsidian-foreground);
+  padding: 0.5em 0.75em;
+
+  &:focus {
+    border-color: var(--obsidian-ring);
+    box-shadow: 0 0 0 3px rgba(0, 120, 242, 0.1);
+    outline: none;
+  }
+}
+
+// ── Checkbox & radio ──────────────────────────────────────────────────────
+input[type="checkbox"] {
+  border-radius: var(--obsidian-radius-sm);
+
+  &:checked {
+    background-color: var(--obsidian-primary);
+    border-color: var(--obsidian-primary);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(0, 120, 242, 0.1);
+  }
+}
+
+input[type="radio"] {
+  &:checked {
+    border-color: var(--obsidian-primary);
+
+    &::before {
+      background-color: var(--obsidian-primary);
+    }
+  }
+}
+
+// ── Combo box / select-kit in forms ──────────────────────────────────────
+.select-kit.combo-box .select-kit-header {
+  border-radius: var(--obsidian-radius-md);
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-input);
+}
+
+// ── ac-wrap (tag input) ──────────────────────────────────────────────────
+div.ac-wrap {
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-input);
+  border-radius: var(--obsidian-radius-md);
+
+  &.is-focused {
+    border-color: var(--obsidian-ring);
+    box-shadow: 0 0 0 3px rgba(0, 120, 242, 0.1);
+  }
+
+  .item {
+    background: var(--obsidian-secondary);
+    border-radius: var(--obsidian-radius-sm);
+    color: var(--obsidian-foreground);
+  }
+}
+
+// ── Labels ────────────────────────────────────────────────────────────────
+label {
+  color: var(--obsidian-foreground);
+}
+
+// ── Form tip ──────────────────────────────────────────────────────────────
+.tip {
+  &.good {
+    color: var(--obsidian-success);
+  }
+
+  &.bad {
+    color: var(--obsidian-destructive);
+  }
+}
+
+// ── Preference pages ──────────────────────────────────────────────────────
+.user-preferences,
+.user-content {
+  .control-group {
+    border-bottom: 1px solid var(--obsidian-border);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+  }
+
+  .controls {
+    .select-kit-header {
+      background: var(--obsidian-muted);
+    }
+  }
+}
+
+// ── Admin settings ───────────────────────────────────────────────────────
+.admin-contents {
+  .admin-detail {
+    background: var(--obsidian-card);
+    border-radius: var(--obsidian-radius-md);
+  }
+
+  .content-list ul li a {
+    color: var(--obsidian-foreground);
+    border-radius: var(--obsidian-radius-sm);
+
+    &:hover {
+      background: var(--obsidian-muted);
+    }
+
+    &.active {
+      background: var(--obsidian-primary);
+      color: var(--obsidian-primary-foreground);
+    }
+  }
+}

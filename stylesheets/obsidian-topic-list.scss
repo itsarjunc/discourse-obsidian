@@ -1,0 +1,141 @@
+// ============================================================================
+// Discourse Obsidian — Topic List
+// ============================================================================
+
+.topic-list {
+  .topic-list-header {
+    .topic-list-data {
+      color: var(--obsidian-muted-foreground);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: $font-down-2;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--obsidian-border);
+      padding: 0.75em 0.5em;
+    }
+  }
+
+  .topic-list-item {
+    border-bottom: 1px solid var(--obsidian-border);
+    transition: background-color var(--obsidian-transition-fast);
+
+    &:hover {
+      background-color: var(--obsidian-muted);
+    }
+
+    .topic-list-data {
+      padding: 0.85em 0.5em;
+    }
+
+    .main-link {
+      .title {
+        color: var(--obsidian-foreground);
+        font-weight: 500;
+        transition: color var(--obsidian-transition-fast);
+      }
+
+      &:hover .title {
+        color: var(--obsidian-primary);
+      }
+
+      .topic-excerpt {
+        color: var(--obsidian-muted-foreground);
+        font-size: $font-down-1;
+      }
+    }
+
+    .posters {
+      a {
+        .avatar {
+          width: 26px;
+          height: 26px;
+          border-radius: var(--obsidian-radius-sm);
+        }
+
+        &:not(:first-child) {
+          margin-left: -6px;
+        }
+
+        &:not(.latest) .avatar {
+          border: 2px solid var(--obsidian-background);
+        }
+      }
+    }
+
+    .posts-map,
+    .num {
+      color: var(--obsidian-muted-foreground);
+
+      a {
+        color: var(--obsidian-muted-foreground);
+        padding: 0;
+
+        &:hover {
+          color: var(--obsidian-primary);
+        }
+      }
+    }
+
+    .num.views {
+      color: var(--obsidian-muted-foreground);
+    }
+
+    .num.activity {
+      a {
+        color: var(--obsidian-muted-foreground);
+
+        &:hover {
+          color: var(--obsidian-primary);
+        }
+      }
+    }
+
+    // ── Pinned / bookmarked / closed icons ────────────────────────────────
+    .topic-statuses .d-icon {
+      color: var(--obsidian-muted-foreground);
+    }
+
+    .topic-statuses .pinned .d-icon {
+      color: var(--obsidian-primary);
+    }
+
+    // ── Visited state ────────────────────────────────────────────────────
+    &.visited {
+      .main-link .title {
+        color: var(--obsidian-muted-foreground);
+        font-weight: 400;
+      }
+
+      &:hover .main-link .title {
+        color: var(--obsidian-foreground);
+      }
+    }
+  }
+
+  // ── New / unread count badges ──────────────────────────────────────────
+  .badge-notification.new-posts,
+  .badge-notification.unread-posts {
+    background-color: var(--obsidian-primary);
+    color: var(--obsidian-primary-foreground);
+    border-radius: 100px;
+    font-size: $font-down-2;
+  }
+}
+
+// ── Topic list separator ──────────────────────────────────────────────────
+.topic-list-item-separator {
+  .topic-list-data {
+    border-top: 2px solid var(--obsidian-primary);
+
+    span {
+      color: var(--obsidian-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+// ── Loading topic list ────────────────────────────────────────────────────
+.topic-list .spinner {
+  border-color: var(--obsidian-border);
+  border-top-color: var(--obsidian-primary);
+}

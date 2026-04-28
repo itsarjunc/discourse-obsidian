@@ -1,0 +1,145 @@
+// ============================================================================
+// Discourse Obsidian — Header
+// ============================================================================
+
+.d-header-wrap {
+  // Frosted glass effect (controlled by theme setting)
+  @if $obsidian_frosted_header {
+    .d-header {
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background: rgba(var(--secondary-rgb), 0.8) !important;
+      border-bottom: 1px solid var(--obsidian-border);
+      box-shadow: none;
+    }
+  } @else {
+    .d-header {
+      background: var(--obsidian-header-bg);
+      border-bottom: 1px solid var(--obsidian-border);
+      box-shadow: none;
+    }
+  }
+}
+
+.d-header {
+  .title {
+    a {
+      color: var(--obsidian-header-fg);
+    }
+  }
+
+  .header-buttons {
+    .btn {
+      border-radius: var(--obsidian-radius-md);
+    }
+
+    .sign-up-button {
+      background-color: var(--obsidian-primary);
+      color: var(--obsidian-primary-foreground);
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+
+    .login-button {
+      background-color: var(--obsidian-muted);
+      color: var(--obsidian-foreground);
+
+      &:hover {
+        background-color: var(--obsidian-secondary);
+      }
+    }
+  }
+}
+
+// ── Header icons ───────────────────────────────────────────────────────────
+.d-header-icons {
+  .d-icon {
+    color: var(--obsidian-muted-foreground);
+    transition: color var(--obsidian-transition-fast);
+  }
+
+  .icon {
+    border-radius: var(--obsidian-radius-md);
+    margin-left: 0.25em;
+    border: 1px solid transparent;
+    transition: all var(--obsidian-transition-fast);
+
+    &:hover {
+      background-color: var(--obsidian-muted);
+
+      .d-icon {
+        color: var(--obsidian-foreground);
+      }
+    }
+
+    img.avatar {
+      border-radius: var(--obsidian-radius-sm);
+    }
+  }
+
+  .active .icon {
+    .d-icon {
+      color: var(--obsidian-primary);
+    }
+  }
+}
+
+// ── Unread notifications badge ─────────────────────────────────────────────
+.unread-high-priority-notifications {
+  background: var(--obsidian-primary);
+  color: var(--obsidian-primary-foreground);
+  border-radius: 100px;
+}
+
+// ── Drop-down panels ──────────────────────────────────────────────────────
+.menu-panel.drop-down {
+  margin-top: 0.75em;
+  border-radius: var(--obsidian-radius-lg);
+  border: 1px solid var(--obsidian-border);
+  background: var(--obsidian-popover);
+  box-shadow: var(--obsidian-shadow-lg);
+}
+
+.drop-down-mode .d-header-icons .active .icon {
+  border: 1px solid transparent;
+}
+
+// ── Search menu ────────────────────────────────────────────────────────────
+.search-menu {
+  .search-input {
+    border-radius: var(--obsidian-radius-md);
+    border-color: var(--obsidian-border);
+    background: var(--obsidian-muted);
+  }
+
+  input[type="text"] {
+    background: transparent;
+    color: var(--obsidian-foreground);
+
+    &::placeholder {
+      color: var(--obsidian-muted-foreground);
+    }
+
+    &:focus {
+      outline: 2px solid var(--obsidian-ring);
+      outline-offset: -1px;
+    }
+  }
+
+  .results {
+    border-radius: var(--obsidian-radius-md);
+    background: var(--obsidian-popover);
+    border: 1px solid var(--obsidian-border);
+  }
+
+  .search-result-topic .topic {
+    border-radius: var(--obsidian-radius-sm);
+    transition: background-color var(--obsidian-transition-fast);
+
+    &:hover {
+      background-color: var(--obsidian-muted);
+    }
+  }
+}

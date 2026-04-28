@@ -1,0 +1,7 @@
+en:
+  theme_metadata:
+    description: "A premium dark-first Discourse theme with layered near-black surfaces, Epic blue accent, and shadcn/ui-inspired token architecture."
+    settings:
+      obsidian_accent_color: "Accent color — used for buttons, links, active states, and highlights."
+      obsidian_border_radius: "Base border radius — controls the roundness of cards, buttons, and inputs."
+      obsidian_frosted_header: "Frosted header — adds a backdrop-blur glass effect to the sticky header."

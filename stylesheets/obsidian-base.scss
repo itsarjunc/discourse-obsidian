@@ -1,0 +1,166 @@
+// ============================================================================
+// Discourse Obsidian — Base / Global Styles
+// ============================================================================
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+  background-color: var(--obsidian-background);
+  color: var(--obsidian-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// ── Global link color ──────────────────────────────────────────────────────
+a {
+  color: var(--obsidian-primary);
+  transition: color var(--obsidian-transition-fast);
+
+  &:hover {
+    color: var(--obsidian-primary);
+    filter: brightness(1.15);
+  }
+}
+
+// ── Selection ──────────────────────────────────────────────────────────────
+::selection {
+  background-color: var(--obsidian-primary);
+  color: var(--obsidian-primary-foreground);
+}
+
+// ── Scrollbar (dark chrome) ────────────────────────────────────────────────
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--obsidian-muted-foreground);
+  border-radius: var(--obsidian-radius);
+
+  &:hover {
+    background: var(--obsidian-foreground);
+  }
+}
+
+// ── Main outlet ────────────────────────────────────────────────────────────
+#main-outlet {
+  padding-top: 1.5em;
+  padding-bottom: 5em;
+}
+
+// ── Alerts ─────────────────────────────────────────────────────────────────
+.alert {
+  background-color: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-border);
+  border-radius: var(--obsidian-radius-lg);
+  color: var(--obsidian-foreground);
+}
+
+// ── Badges ─────────────────────────────────────────────────────────────────
+.badge-wrapper.box {
+  border-radius: var(--obsidian-radius-sm);
+  overflow: hidden;
+}
+
+.badge-wrapper.bullet .badge-category-bg {
+  border-radius: 2px;
+}
+
+// ── Discourse tags ─────────────────────────────────────────────────────────
+.discourse-tag {
+  background-color: var(--obsidian-muted);
+  color: var(--obsidian-muted-foreground) !important;
+  border-radius: var(--obsidian-radius-sm);
+  padding: 0.15em 0.45em;
+  font-size: $font-down-1;
+  transition: background-color var(--obsidian-transition-fast);
+
+  &:hover {
+    background-color: var(--obsidian-secondary);
+    color: var(--obsidian-foreground) !important;
+  }
+}
+
+.discourse-tags .discourse-tag.simple:not(:last-child)::after,
+.list-tags .discourse-tag.simple:not(:last-child)::after {
+  content: "";
+  margin-left: 0;
+}
+
+// ── Nav pills ──────────────────────────────────────────────────────────────
+.nav-pills > li > a {
+  border-radius: var(--obsidian-radius-md);
+  color: var(--obsidian-muted-foreground);
+  transition: all var(--obsidian-transition-fast);
+
+  &:hover {
+    background-color: var(--obsidian-muted);
+    color: var(--obsidian-foreground);
+  }
+
+  &.active {
+    background-color: var(--obsidian-primary);
+    color: var(--obsidian-primary-foreground);
+  }
+}
+
+// ── Quote button ───────────────────────────────────────────────────────────
+.quote-button {
+  border-radius: var(--obsidian-radius-md);
+  background-color: var(--obsidian-primary);
+  color: var(--obsidian-primary-foreground);
+}
+
+// ── Loading spinner ────────────────────────────────────────────────────────
+.spinner {
+  border-color: var(--obsidian-border);
+  border-top-color: var(--obsidian-primary);
+}
+
+// ── User avatar rounding ───────────────────────────────────────────────────
+.avatar {
+  border-radius: var(--obsidian-radius-sm);
+}
+
+// ── Breadcrumbs ────────────────────────────────────────────────────────────
+.category-breadcrumb {
+  .select-kit.combo-box .select-kit-header {
+    border-radius: var(--obsidian-radius-md);
+    border-color: var(--obsidian-border);
+    background: var(--obsidian-muted);
+  }
+}
+
+// ── Not-found page ─────────────────────────────────────────────────────────
+.not-found-container {
+  background-color: var(--obsidian-background);
+}
+
+// ── Timeline ───────────────────────────────────────────────────────────────
+.timeline-container .topic-timeline .timeline-handle {
+  background-color: var(--obsidian-primary);
+}
+
+.timeline-container .topic-timeline .timeline-scrollarea {
+  border-left-color: var(--obsidian-primary);
+}
+
+// ── Highlight animation ───────────────────────────────────────────────────
+@keyframes background-fade-highlight {
+  0% {
+    background-color: var(--highlight-low);
+  }
+  100% {
+    background-color: var(--obsidian-background);
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Discourse Obsidian",
+  "about_url": "",
+  "license_url": "https://opensource.org/licenses/MIT",
+  "authors": "Arjun",
+  "theme_version": "1.0.0",
+  "minimum_discourse_version": "3.1.0",
+  "color_schemes": {
+    "obsidian-dark": {
+      "primary": "e4e4e7",
+      "secondary": "0a0a0b",
+      "tertiary": "0078f2",
+      "quaternary": "3b82f6",
+      "header_background": "0f0f11",
+      "header_primary": "e4e4e7",
+      "highlight": "0078f2",
+      "danger": "ef4444",
+      "success": "22c55e",
+      "love": "f472b6",
+      "selected": "0078f2",
+      "hover": "1a1a1f"
+    },
+    "obsidian-light": {
+      "primary": "18181b",
+      "secondary": "fafafa",
+      "tertiary": "0078f2",
+      "quaternary": "3b82f6",
+      "header_background": "ffffff",
+      "header_primary": "18181b",
+      "highlight": "0078f2",
+      "danger": "ef4444",
+      "success": "22c55e",
+      "love": "ec4899",
+      "selected": "dbeafe",
+      "hover": "f4f4f5"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+obsidian_accent_color:
+  default: "#0078f2"
+  type: string
+  description: "Primary accent color used across the theme (buttons, links, highlights)."
+
+obsidian_border_radius:
+  default: "0.5rem"
+  type: string
+  description: "Base border radius for UI elements (cards, buttons, inputs)."
+
+obsidian_frosted_header:
+  default: true
+  type: bool
+  description: "Enable frosted glass (backdrop-blur) effect on the sticky header."

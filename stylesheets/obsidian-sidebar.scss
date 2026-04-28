@@ -1,0 +1,114 @@
+// ============================================================================
+// Discourse Obsidian — Sidebar
+// ============================================================================
+
+.sidebar-wrapper {
+  .sidebar-container {
+    border-right: 1px solid var(--obsidian-sidebar-border);
+    background: var(--obsidian-sidebar);
+  }
+}
+
+// ── Section links ──────────────────────────────────────────────────────────
+.sidebar-section-link-wrapper {
+  .sidebar-section-link {
+    border-radius: var(--obsidian-radius-md);
+    color: var(--obsidian-sidebar-foreground);
+    padding: 0.4em 0.65em;
+    margin: 1px 0;
+    transition: all var(--obsidian-transition-fast);
+
+    .d-icon {
+      color: var(--obsidian-muted-foreground);
+      transition: color var(--obsidian-transition-fast);
+    }
+
+    &:hover {
+      background-color: var(--obsidian-sidebar-accent);
+      color: var(--obsidian-sidebar-accent-foreground);
+
+      .d-icon {
+        color: var(--obsidian-sidebar-accent-foreground);
+      }
+    }
+
+    &.active {
+      background-color: var(--obsidian-sidebar-accent);
+      color: var(--obsidian-sidebar-primary);
+      font-weight: 600;
+
+      .d-icon {
+        color: var(--obsidian-sidebar-primary);
+      }
+    }
+  }
+}
+
+// ── Section headers ────────────────────────────────────────────────────────
+.sidebar-section-header-wrapper {
+  .sidebar-section-header {
+    color: var(--obsidian-muted-foreground);
+    font-weight: 600;
+    font-size: $font-down-1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section-header-button {
+    color: var(--obsidian-muted-foreground);
+
+    &:hover {
+      color: var(--obsidian-foreground);
+    }
+  }
+}
+
+// ── Sidebar footer ────────────────────────────────────────────────────────
+.sidebar-footer-wrapper {
+  border-top: 1px solid var(--obsidian-sidebar-border);
+
+  .btn {
+    color: var(--obsidian-muted-foreground);
+    border-radius: var(--obsidian-radius-md);
+
+    &:hover {
+      background-color: var(--obsidian-sidebar-accent);
+      color: var(--obsidian-foreground);
+    }
+  }
+}
+
+// ── Sidebar filter ────────────────────────────────────────────────────────
+.sidebar-filter {
+  input {
+    background: var(--obsidian-muted);
+    border: 1px solid var(--obsidian-border);
+    border-radius: var(--obsidian-radius-md);
+    color: var(--obsidian-foreground);
+
+    &:focus {
+      border-color: var(--obsidian-ring);
+      box-shadow: 0 0 0 2px rgba(0, 120, 242, 0.15);
+    }
+  }
+}
+
+// ── Community section badges ──────────────────────────────────────────────
+.sidebar-section-link-content-badge {
+  background-color: var(--obsidian-primary);
+  color: var(--obsidian-primary-foreground);
+  border-radius: 100px;
+  font-size: $font-down-2;
+  min-width: 1.4em;
+  padding: 0.1em 0.4em;
+}
+
+// ── More section ──────────────────────────────────────────────────────────
+.sidebar-more-section-links-details {
+  .sidebar-more-section-links-details-content {
+    background: var(--obsidian-popover);
+    border: 1px solid var(--obsidian-border);
+    border-radius: var(--obsidian-radius-lg);
+    box-shadow: var(--obsidian-shadow-md);
+  }
+}

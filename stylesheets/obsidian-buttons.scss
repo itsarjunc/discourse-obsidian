@@ -1,0 +1,133 @@
+// ============================================================================
+// Discourse Obsidian — Buttons
+// ============================================================================
+
+// ── Primary buttons ────────────────────────────────────────────────────────
+.btn-primary {
+  background-color: var(--obsidian-primary) !important;
+  color: var(--obsidian-primary-foreground) !important;
+  border: none;
+  border-radius: var(--obsidian-radius-md);
+  font-weight: 600;
+  transition: all var(--obsidian-transition-fast);
+
+  .d-icon {
+    color: var(--obsidian-primary-foreground) !important;
+  }
+
+  &:hover,
+  &:focus {
+    filter: brightness(1.12);
+    box-shadow: var(--obsidian-shadow-sm);
+  }
+
+  &:active {
+    filter: brightness(0.95);
+  }
+
+  &[disabled],
+  &.disabled {
+    opacity: 0.5;
+    filter: none;
+  }
+}
+
+// ── Default / secondary buttons ────────────────────────────────────────────
+.btn-default,
+.btn:not(.btn-primary):not(.btn-danger):not(.btn-flat):not(.no-text) {
+  background-color: var(--obsidian-muted);
+  color: var(--obsidian-foreground);
+  border: 1px solid var(--obsidian-border);
+  border-radius: var(--obsidian-radius-md);
+  transition: all var(--obsidian-transition-fast);
+
+  .d-icon {
+    color: var(--obsidian-muted-foreground);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--obsidian-secondary);
+    border-color: var(--obsidian-muted-foreground);
+
+    .d-icon {
+      color: var(--obsidian-foreground);
+    }
+  }
+}
+
+// ── Danger button ──────────────────────────────────────────────────────────
+.btn-danger {
+  background-color: var(--obsidian-destructive) !important;
+  color: var(--obsidian-destructive-foreground) !important;
+  border: none;
+  border-radius: var(--obsidian-radius-md);
+  font-weight: 600;
+  transition: all var(--obsidian-transition-fast);
+
+  .d-icon {
+    color: var(--obsidian-destructive-foreground) !important;
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+// ── Flat / icon-only buttons ──────────────────────────────────────────────
+.btn-flat {
+  color: var(--obsidian-muted-foreground);
+  border-radius: var(--obsidian-radius-sm);
+  transition: all var(--obsidian-transition-fast);
+
+  .d-icon {
+    color: var(--obsidian-muted-foreground);
+  }
+
+  &:hover {
+    background-color: var(--obsidian-muted);
+    color: var(--obsidian-foreground);
+
+    .d-icon {
+      color: var(--obsidian-foreground);
+    }
+  }
+}
+
+// ── "New Topic" / action button ──────────────────────────────────────────
+#create-topic {
+  background-color: var(--obsidian-primary) !important;
+  color: var(--obsidian-primary-foreground) !important;
+  border: none;
+  border-radius: var(--obsidian-radius-md);
+  font-weight: 600;
+
+  .d-icon {
+    color: var(--obsidian-primary-foreground) !important;
+  }
+
+  &:hover {
+    filter: brightness(1.12);
+    box-shadow: var(--obsidian-shadow-sm);
+  }
+}
+
+// ── Back button ──────────────────────────────────────────────────────────
+.btn-back {
+  background: var(--obsidian-muted);
+  border: 1px solid var(--obsidian-border);
+  border-radius: var(--obsidian-radius-md);
+  color: var(--obsidian-muted-foreground);
+
+  &:hover {
+    background: var(--obsidian-secondary);
+    color: var(--obsidian-foreground);
+  }
+}
+
+// ── Notification state ───────────────────────────────────────────────────
+.btn .badge-notification {
+  background-color: var(--obsidian-primary);
+  color: var(--obsidian-primary-foreground);
+  border-radius: 100px;
+}
